@@ -1,0 +1,73 @@
+<mat-card class="example-card">
+  <mat-stepper labelPosition="bottom" #stepper class="custom-stepper">
+    <mat-step [stepControl]="firstFormGroup">
+      <form [formGroup]="firstFormGroup">
+        <ng-template matStepLabel>Contato</ng-template>
+        <form class="example-form">
+          <mat-form-field class="example-full-width">
+            <mat-label>Nome (Opcional)</mat-label>
+            <input matInput placeholder="Nome">
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <mat-label>Número de Telefone (Opcional)</mat-label>
+            <input matInput placeholder="Contato" value="+55">
+          </mat-form-field>
+        </form>
+        <div>
+          <button mat-button matStepperNext>Próximo</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup">
+      <form [formGroup]="secondFormGroup" class="example-form">
+        <ng-template matStepLabel>Refeição</ng-template>
+        <mat-grid-list cols="4" rowHeight="100px">
+          <mat-checkbox [formControl]="hideRequiredControl"><strong>O que você achou da refeição hoje?</strong></mat-checkbox>
+          <mat-radio-group [formControl]="floatLabelControl">
+            <mat-radio-button value="1">Ótimo</mat-radio-button>
+            <mat-radio-button value="2">Bom</mat-radio-button>
+            <mat-radio-button value="3">Regular</mat-radio-button>
+            <mat-radio-button value="4">Ruim</mat-radio-button>
+            <mat-radio-button value="5">Péssimo</mat-radio-button>
+          </mat-radio-group>
+        </mat-grid-list>
+        <mat-grid-list cols="4" rowHeight="100px">
+          <mat-checkbox [formControl]="hideRequiredControl"><strong>O que você achou do nosso churrasco?</strong></mat-checkbox>
+          <mat-radio-group [formControl]="floatLabelControl">
+            <mat-radio-button value="1">Ótimo</mat-radio-button>
+            <mat-radio-button value="2">Bom</mat-radio-button>
+            <mat-radio-button value="3">Regular</mat-radio-button>
+            <mat-radio-button value="4">Ruim</mat-radio-button>
+            <mat-radio-button value="5">Péssimo</mat-radio-button>
+          </mat-radio-group>
+        </mat-grid-list>
+        <mat-form-field class="example-full-width">
+          <mat-label>Observação</mat-label>
+          <textarea matInput placeholder="Observação..."></textarea>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>O que mais gostou no seu almoço de hoje?</mat-label>
+          <textarea matInput placeholder="Observação..."></textarea>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>Algo que não gostou no seu almoço de hoje? Por que?</mat-label>
+          <textarea matInput placeholder="Observação..."></textarea>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Voltar</button>
+          <button mat-button matStepperNext>Próximo</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Done</ng-template>
+      <p>You are now done.</p>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button (click)="stepper.reset()">Reset</button>
+      </div>
+    </mat-step>
+  </mat-stepper>
+
+</mat-card>

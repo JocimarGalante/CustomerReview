@@ -1,0 +1,51 @@
+.mat-mdc-form-field {
+  margin-top: 16px;
+}
+.example-card {
+  max-width: 800px;
+  width: 100%;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.example-full-width {
+  width: 100%;
+}
+/* Estilo global para o stepper */
+.custom-stepper {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Estilo para os passos (steps) */
+.mat-step {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* Estilo para os botões do stepper */
+.mat-step-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Estilo para o botão 'Next' */
+.mat-flat-button.mat-primary {
+  background-color: #4caf50;
+  color: #ffffff;
+}
+
+/* Estilo para o botão 'Back' */
+.mat-flat-button.mat-accent {
+  background-color: #2196f3;
+  color: #ffffff;
+}
+
+.custom-blue-button {
+  background-color: #2196f3; /* Azul Material Design padrão */
+  color: #ffffff; /* Texto em branco */
+}
